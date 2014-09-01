@@ -1,4 +1,4 @@
-auto-ffmpeg
+Auto FFMpeg Installer for cPanel
 ===========
 
 Auto FFMpeg Installer for cPanel w/CentOS 6+
