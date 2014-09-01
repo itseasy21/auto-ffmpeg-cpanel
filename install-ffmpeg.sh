@@ -14,7 +14,7 @@ RESET='\033[0m'
 clear
 
 echo -e "$GREEN----------------------------------------$RESET"
-echo -e "    $RED W3TooLS FFMpeg Installer $RESET"
+echo -e "     $RED W3TooLS FFMpeg Installer $RESET"
 echo -e "              Version 0.1             "
 echo -e "     http://www.w3tool.blogspot.in/  "
 echo -e "$GREEN----------------------------------------$RESET"
