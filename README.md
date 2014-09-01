@@ -6,6 +6,7 @@ Auto FFMpeg Installer for cPanel w/CentOS 6+
 ####Requirements:
 * CentOS 6+
 * PuTTY
+* cPanel
 
 That's all! Did you expected more? 
 
