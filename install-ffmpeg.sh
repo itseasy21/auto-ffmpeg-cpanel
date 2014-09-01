@@ -19,7 +19,48 @@ echo -e "              Version 0.1             "
 echo -e "     http://www.w3tool.blogspot.in/  "
 echo -e "$GREEN----------------------------------------$RESET"
 
-#adding repo
+
+#--Making Sure we have required libs
+cd /root
+yum install vim wget sed rpm -y
+
+#--cPanel check
+echo -ne "Searching for cPanel .."
+if [ -e  "/usr/local/cpanel/version" ]; then
+	echo -e "[ $GREEN cPanel Found $RESET ]"
+else
+	echo -e "[ $RED cPanel Not Found.\n Exiting Install. $RESET ]"
+	exit
+fi
+
+#--Libs Check
+echo " "
+echo -ne "Checking for Yum .."
+if [ -e  "/etc/yum.conf" ]; then
+	echo -e "[ $GREEN Found $RESET ]"
+else
+	echo -e "[ $RED Not Found $RESET ]"
+	exit
+fi
+
+echo -ne "Checking for SED .."
+if [ -e  "/bin/sed" ]; then
+	echo -e "[ $GREEN Found $RESET ]"
+else
+	echo -e "[ $RED Not Found $RESET ]"
+	exit
+fi
+
+#--checking old ffmpeg installation
+echo -ne "Searching for Previous FFMpeg Installation .."
+if [ -e  "/usr/bin/ffmpeg" ]; then
+	echo -e "[ $RED FFMpeg Found.\n Exiting Install. $RESET ]"
+	exit
+else
+	echo -e "[ $GREEN FFMpeg Not Found, Proceeding ... $RESET ]"
+fi
+
+#--Adding repo
 cd /root
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 wget https://raw.githubusercontent.com/itseasy21/auto-ffmpeg/master/auto-ffmpeg.repo -O /etc/yum.repos.d/auto-ffmpeg.repo
