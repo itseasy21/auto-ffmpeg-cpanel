@@ -98,6 +98,9 @@ echo "extension=\"ffmpeg.so\"" >> $phpini
 #restarting http
 /etc/init.d/httpd restart
 
+#--Clearing Your Screen Again
+clear
+
 #finished
 echo -e "$GREEN ---------------------------------------------------$RESET"
 echo -e "$GREEN      FFMpeg Installation Complete       $RESET"
