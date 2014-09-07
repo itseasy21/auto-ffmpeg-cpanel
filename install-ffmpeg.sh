@@ -63,7 +63,7 @@ fi
 #--Adding repo
 cd /root
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
-wget https://raw.githubusercontent.com/itseasy21/auto-ffmpeg-cpanel/master/auto-ffmpeg.repo -O /etc/yum.repos.d/auto-ffmpeg.repo
+wget --no-check-certificate https://raw.githubusercontent.com/itseasy21/auto-ffmpeg-cpanel/master/auto-ffmpeg.repo -O /etc/yum.repos.d/auto-ffmpeg.repo
 
 #getting os info
 os=$( uname -i )
